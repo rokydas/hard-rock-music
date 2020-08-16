@@ -10,6 +10,7 @@ inputMusic.addEventListener('keypress', function(){
 
 function searchMusic(){
     document.getElementById('all-results').innerHTML = '';
+    document.getElementById('lyrics-or-details').innerHTML = '';
     const keyword = inputMusic.value;
     fetch(`https://api.lyrics.ovh/suggest/${keyword}`)
     .then(res => res.json())
